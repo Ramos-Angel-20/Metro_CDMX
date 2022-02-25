@@ -19,8 +19,17 @@ const createLinesDescription = () => {
         const cleanedStationsList = trimmedStations.filter(list => list !== '');
         
         const coordinates = cleanedStationsList.map(values => {
+            
+            const fetchedLineStationsName = xpath.select(`/Document/Folder[2]/Placemark/Point/coordinates[normalize-space()="${values}"]/parent::Point/parent::Placemark/name/text()`, doc);
+            const fetchedLineStationsDescription = xpath.select(`/Document/Folder[2]/Placemark/Point/coordinates[normalize-space()="${values}"]/parent::Point/parent::Placemark/description/text()`, doc);
+            const stationName = fetchedLineStationsName.toString();
+            const stationDescription = fetchedLineStationsDescription.toString();
             const splitted = values.split(',');
+
+
             return {
+                stationName, 
+                stationDescription,
                 lat: splitted[0],
                 long: splitted[1]
             };
@@ -38,6 +47,4 @@ const createLinesDescription = () => {
 }
 
 const linesDescription = createLinesDescription();
-linesDescription.forEach(item => {
-    console.log(item);
-})
+linesDescription.forEach(item => console.log(item));
