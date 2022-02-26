@@ -10,10 +10,10 @@ A partir del archivo .kml proporcionado, obtener la descripción de la todas las
 Basándose en la etapa anterior, crear un programa que a partir de los nombres de un par de estaciones, te de instrucciones precisas para trasladarte de una estación a otra, incluyendo todos los detalles necesarios para cada segmento de la ruta en caso de que la ruta se componga de varios segmentos.
 
 Para cada segmento debe indicar:
-    * Línea a la que corresponde el segmento.
-    * Estación de origen.
-    * Estación destino.
-    * Número de estaciones que hay que viajar.
+* Línea a la que corresponde el segmento.
+* Estación de origen.
+* Estación destino.
+* Número de estaciones que hay que viajar.
 
 ## Etapa 3
 Exponer la funcionalidad anterior como un API REST
