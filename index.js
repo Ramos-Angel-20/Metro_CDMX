@@ -84,6 +84,6 @@ linesDescription.forEach(item => {
 });
 
 const path = graph.findPathByDijkstra('Aculco', 'Morelos');
-console.log(path);
+
 
 
