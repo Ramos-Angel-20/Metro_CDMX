@@ -83,7 +83,15 @@ class WeightedGraph {
             }
         }
 
-        return path.concat(smallest).reverse();
+
+        const description = {
+            'Estacion de origen': start,
+            'Estacion de destino': finish,
+            'numero de estaciones': path.length + 1,
+            ruta: path.concat(smallest).reverse() 
+        };
+
+        return description
     }
 }
 
